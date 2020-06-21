@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select id = "city">
+        <option value="o1">o1</option>
+        <option value="o2">o2</option>
+        <option value="o3">o3</option>
+    </select>
+
+    <section id = "area">
+        <option>t1</option>
+        <option>t2</option>
+    </section>
+</body>
+<script type="text/javascript">
+    var select = document.getElementById("city");
+    select.onchange  = function() {
+        var area = document.getElementById("area");
+
+        var optionVal = select.value;
+    };
+</script>
+</html>

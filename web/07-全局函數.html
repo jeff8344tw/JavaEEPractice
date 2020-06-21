@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*
+            編碼和解碼
+            encodeURI() decodeURI()
+            encodeURIComponent() decodeURIComponent()
+            escape() unescape()
+
+            三組函數的編碼範圍不同
+            開發中常用encodeU開發中常用encodeURI
+         */
+
+        var url = "http://google.com?name=jeff&password=123";
+        console.log(encodeURI(url));
+        console.log(encodeURIComponent(url));
+        console.log(escape(url));
+
+        // 強制轉換
+        Number();
+        String();
+        Boolean();
+        // parseInt();
+        // parseFloat();
+
+        function print(str) {
+            eval(str);
+        }
+
+        print("var a = 2; var b = 3; alert(a+n);")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

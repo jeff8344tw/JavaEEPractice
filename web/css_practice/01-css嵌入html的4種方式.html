@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 2.內部樣式如果css代碼較多時不建議使用這種方式 -->
+    <style type="text/css">
+        div {
+            color: orange;
+            font-size: 50px;
+        }
+    </style>
+    <!-- 3.鏈入外部樣式，開發中建議使用 -->
+    <link rel="stylesheet" type="text/css" href="css/css1.css" />
+    <!-- 4.import鏈入，開發中視情況使用 -->
+    <style type="text/css">
+        @import url("css/css1.css");
+    </style>
+</head>
+<body>
+    <!-- 1.嵌入，不建議使用 -->
+    <div style="color:red; font-size: 100px">好好學習天天向上</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // Number
+        var num1 = new Number(8);
+        var num2 = Number(6);
+        num1.toString();
+        num1.valueOf();
+
+        // String
+        var str = new String("monkey-1024-javascript");
+        str.length;
+        str.charAt(3);
+        str.charCodeAt(4);
+        str.indexOf("n");
+        var arr = str.split("-");
+        for(index in arr) {
+            alert(arr[index]);
+        }
+        str.substr(3);
+        str.substring(2,5);
+        str.toUpperCase();
+
+        // Array
+        var arr =  new Array();
+        arr = new Array(10);
+        arr = new Array(8,"java");
+
+        var d = new Date();
+        d.toLocaleString();
+
+        var reg = new RegExp();
+        reg = /^$/;
+
+        reg = /^[A-z0-9_-]+\@[A-z0-9]+\.[A-z]+$/
+
+        var email = "monkey@monkey1024.com";
+
+        alert(reg.test(email));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
