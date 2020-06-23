@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="baseInfo" action="#" method = "post">
+        input:<input type="text" value="value1" id="id1" name="name1">
+        <br>
+        input:<input type="text" value="value2" id="id2" name="name2">
+        <br>
+        input:<input type="text" value="value3" id="id3" name="name3">
+        <br>
+        <input type="button" id="btn" name="submit" value="提交" />
+
+        <select name="hobby" id="hobby">
+            <option value="basketball">籃球</option>
+            <option value="baseball">足球</option>
+            <option id="vb1" value="volleyball">排球</option>
+        </select>
+
+        <select name="hobby2" id="hobby2">
+            <option value="basketball">籃球2</option>
+            <option value="baseball">足球2</option>
+            <option id="vb2" value="volleyball">排球2</option>
+        </select>
+    </form>
+    <a id="java" href="http://google.com">java</a>
+</body>
+<script type="text/javascript">
+    var volleyball = document.getElementById("vb1");
+    var volleyball2 = document.getElementById("vb2");
+
+    var hobby = document.getElementById("hobby");
+
+    hobby.replaceChild(volleyball,volleyball2);
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #d1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            padding: 50px;
+        }
+
+        #d2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <script type="text/javascript">
+        // IE:window.event.cancelBubble = false;
+        // W3C:傳遞過來的對象.stopPropagation();
+
+        function fun1(){
+            alert("fun1");
+        }
+        function fun2(e){
+            alert("fun2");
+            if(e && e.stopPropagation){
+                e.stopPropagation();
+            }else{
+                window.event.cancelBubble = false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="d1" onclick="fun1()">
+        <div id="d2" onclick="fun2(event)"></div>
+    </div>
+</body>
+</html>

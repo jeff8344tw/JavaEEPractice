@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="baseInfo" action="#" method = "post">
+        <select name="hobby" id="hobby">
+            <option value="basketball">籃球</option>
+            <option id="football" value="football">足球</option>
+            <option value="volleyball">排球</option>
+        </select>
+    </form>
+</body>
+<script type="text/javascript">
+    // 創建一個option標籤對象
+    var optionNew = document.createElement("option"); //<option></option>
+    // 在標籤中添加value屬性和值
+    optionNew.setAttribute("value","run"); //<option value="run"></option>
+
+    // 添加文本
+    var txt = document.createTextNode("run");
+    optionNew.appendChild(txt); //<option value="run">run</option>
+
+    var football = document.getElementById("football");
+
+    var hobboy = document.getElementById("hobby");
+    // hobby.insertBefore(optionNew,football);
+    hobby.insertBefore(optionNew,hobboy.options[1]);
+</script>
+</html>

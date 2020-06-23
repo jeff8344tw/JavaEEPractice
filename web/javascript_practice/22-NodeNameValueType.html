@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="baseInfo" action="#" method = "post">
+        input:<input type="text" value="value1" id="id1" name="name1">
+        <br>
+        input:<input type="text" value="value2" id="id2" name="name2">
+        <br>
+        input:<input type="text" value="value3" id="id3" name="name3">
+        <br>
+        <input type="button" id="btn" name="submit" value="提交" />
+
+        <select name="hobby" id="hobby">
+            <option value="basketball">籃球</option>
+            <option value="baseball">足球</option>
+            <option value="volleyball">排球</option>
+        </select>
+    </form>
+    <a id="java" href="http://google.com">java</a>
+</body>
+<script type="text/javascript">
+    // 元素節點
+    var node = document.getElementById("id1");
+    alert(node.nodeName);
+    alert(node.nodeType); // 1
+    alert(node.nodeValue); // null
+
+    // 文本節點
+    var node2 = document.getElementById("java");
+    var textNode = node2.firstChild;
+    alert(textNode.nodeName); // #text
+    alert(textNode.nodeType); // 3
+    alert(textNode.nodeValue); // java
+
+    // 屬性節點
+    var node3 = document.getElementById("java");
+    var attrNode = node3.getAttributeNode("href");
+    alert(attrNode.nodeName); // href
+    alert(attrNode.nodeType); // 2
+    alert(attrNode.nodeValue); // http://google.com
+</script>
+</html>

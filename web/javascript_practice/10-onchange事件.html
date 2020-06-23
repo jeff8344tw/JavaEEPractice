@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select id = "city">
+        <option value="o1">o1</option>
+        <option value="o2">o2</option>
+        <option value="o3">o3</option>
+    </select>
+
+    <select id = "area">
+        <option>a1</option>
+        <option>a2</option>
+    </select>
+</body>
+<script type="text/javascript">
+    var select = document.getElementById("city");
+    select.onchange  = function() {
+        var area = document.getElementById("area");
+
+        var optionVal = select.value;
+        if(optionVal == "o1"){
+            area.innerHTML = "<option>a1</option><option>a2</option>";
+        }else if(optionVal == "o2"){
+            area.innerHTML = "<option>b1</option><option>b2</option>";
+        }else if(optionVal == "o3"){
+            area.innerHTML = "<option>c1</option><option>c2</option>";
+        }else {
+            alert("error");
+        }
+    };
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- 1.將事件和響應行為都內嵌到html中 -->
+    <input type="button" value="click1" onclick="alert('事件綁定1')">
+    <!-- 2.將事件內遷到html中，響應行為用javascript函數封裝 -->
+    <input type="button" value="click2" onclick="fun()">
+    <!-- 3.將事件和響應行為與html標籤完全分離 -->
+    <input id="btn" type="button" value="click3" >
+</body>
+<!-- 瀏覽器加載html時會從上往下加載 -->
+<script type="text/javascript">
+    function fun() {
+        alert("事件綁定2");
+    }
+
+    var btn = document.getElementById("btn");
+    btn.onclick = function() {
+        alert("事件綁定3");
+    };
+</script>
+</html>

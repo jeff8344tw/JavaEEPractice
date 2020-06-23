@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    // IE:window.event.returnValue= false;
+    // W3C:傳遞過來的對象.preventDefault();
+    function fun(e){
+        if(e && e.preventDefault){
+            e.preventDefault()
+        }else{
+            window.event.returnValue = false;
+        }
+    }
+</script>
+<body>
+    <a href="#" onclick="fun(event)">click me</a>
+</body>
+</html>
