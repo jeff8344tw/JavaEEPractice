@@ -3,4 +3,49 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!-- 創建一個servlet實例 -->
+    <servlet>
+        <!-- 給servlet取一個名字，改名字需與servlet-mapping中的servlet-name一致 -->
+        <servlet-name>firstServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.FirstServlet</servlet-class>
+    </servlet>
+
+    <!-- 給servlet一個可以訪問的uri地址 -->
+    <servlet-mapping>
+        <servlet-name>firstServlet</servlet-name>
+        <!-- uri地址 -->
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>lifeServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.LifeServlet</servlet-class>
+        <!-- 讓tomcat啟動時實例化servlet並調用init方法 -->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>lifeServlet</servlet-name>
+        <url-pattern>/life</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>config</servlet-name>
+        <servlet-class>com.jeff.servlet.ConfigTest01</servlet-class>
+        <!-- 初始化參數 -->
+        <init-param>
+            <param-name>userName</param-name>
+            <param-value>jeff</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>config</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
 </web-app>
