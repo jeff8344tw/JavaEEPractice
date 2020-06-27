@@ -4,6 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <context-param>
+        <param-name>MySQLDriver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUrl</param-name>
+        <param-value>jdbc:mysql:</param-value>
+    </context-param>
+
     <!-- 創建一個servlet實例 -->
     <servlet>
         <!-- 給servlet取一個名字，改名字需與servlet-mapping中的servlet-name一致 -->
@@ -47,5 +56,114 @@
     <servlet-mapping>
         <servlet-name>config</servlet-name>
         <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>context1</servlet-name>
+        <servlet-class>com.jeff.servlet.ContextTest01</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>context1</servlet-name>
+        <url-pattern>/context1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>context2</servlet-name>
+        <servlet-class>com.jeff.servlet.ContextTest02</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>context2</servlet-name>
+        <!-- 精確路徑模式 -->
+        <url-pattern>/context2</url-pattern>
+        <!--
+        <url-pattern>/servlet/context02</url-pattern>
+        <url-pattern>/test/servlet/context02</url-pattern>
+        -->
+        <!-- 通配符路徑模式 -->
+        <!--
+        <url-pattern>/servlet/*</url-pattern>
+        -->
+        <!-- 全路徑模式 -->
+        <!--
+        會攔截所有資源(靜態資源+動態資源)
+        <url-pattern>/*</url-pattern>
+        只攔截靜態資源
+        <url-pattern>/</url-pattern>
+        -->
+        <!-- 後綴名路徑模式 -->
+        <url-pattern>*.do</url-pattern>
+
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>simpleServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.SimpleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>simpleServlet</servlet-name>
+        <url-pattern>/simpleServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>http1</servlet-name>
+        <servlet-class>com.jeff.servlet.http.HttpTest01</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>http1</servlet-name>
+        <url-pattern>/http1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>requestTest</servlet-name>
+        <servlet-class>com.jeff.servlet.http.RequestTest01</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>requestTest</servlet-name>
+        <url-pattern>/requestTest</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>responseTest</servlet-name>
+        <servlet-class>com.jeff.servlet.http.ResponseTest01</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>responseTest</servlet-name>
+        <url-pattern>/responseTest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>forward</servlet-name>
+        <servlet-class>com.jeff.servlet.http.Forward01</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>forward</servlet-name>
+        <url-pattern>/forward</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>other</servlet-name>
+        <servlet-class>com.jeff.servlet.http.Other</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>other</servlet-name>
+        <url-pattern>/other</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>redirect</servlet-name>
+        <servlet-class>com.jeff.servlet.http.Redirect01</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>redirect</servlet-name>
+        <url-pattern>/redirect</url-pattern>
     </servlet-mapping>
 </web-app>
