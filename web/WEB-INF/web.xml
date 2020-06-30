@@ -13,6 +13,11 @@
         <param-value>jdbc:mysql:</param-value>
     </context-param>
 
+    <!-- 設置session的失效時間，單位是分鐘，默認是30分鐘 -->
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
     <!-- 創建一個servlet實例 -->
     <servlet>
         <!-- 給servlet取一個名字，改名字需與servlet-mapping中的servlet-name一致 -->
@@ -166,4 +171,96 @@
         <servlet-name>redirect</servlet-name>
         <url-pattern>/redirect</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>cookieReceive</servlet-name>
+        <servlet-class>com.jeff.servlet.http.CookieReceive</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>cookieTest</servlet-name>
+        <servlet-class>com.jeff.servlet.http.CookieTest01</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>cookieTest</servlet-name>
+        <url-pattern>/cookieTest</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>cookieReceive</servlet-name>
+        <url-pattern>/aaa/cookieReceive</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>lastVIsitServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.http.LastVIsitServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>lastVIsitServlet</servlet-name>
+        <url-pattern>/lastVisitServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.http.LoginServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/`loginServlet`</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>doLoginServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.http.doLoginServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>doLoginServlet</servlet-name>
+        <url-pattern>/doLoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>showBookServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.session.ShowBookServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>showBookServlet</servlet-name>
+        <url-pattern>/showBookServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addCartServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.session.AddCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addCartServlet</servlet-name>
+        <url-pattern>/addCartServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>showCartServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.session.ShowCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>showCartServlet</servlet-name>
+        <url-pattern>/showCartServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>clearBookServlet</servlet-name>
+        <servlet-class>com.jeff.servlet.session.ClearBookServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>clearBookServlet</servlet-name>
+        <url-pattern>/clearBookServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
