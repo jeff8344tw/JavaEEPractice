@@ -1,0 +1,20 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee"
+        version="2.0">
+
+    <!-- 指定定義的當前函數庫版本號，隨意定義 -->
+    <tlib-version>1.0</tlib-version>
+    <!-- 指定該函數庫的名稱，一個函數庫對應一個名稱，名稱通常與文件名相同，該名稱在JSP中會使用到 -->
+    <short-name>jeffel</short-name>
+    <!-- 指定該函數庫對應的URL，一個庫對應一個URL，在JSP中會用到 -->
+    <uri>http://localhost/jsp/jeffeltld</uri>
+    <function>
+        <!-- 指定將來在JSP的EL中使用該函數的名稱，一般與類中的靜態方法一致 -->
+        <name>toUpper</name>
+        <!-- 指定該函數定義在哪個類中 -->
+        <function-class>com.jeff.function.StringFunction</function-class>
+        <!-- 指定類中的方法 -->
+        <function-signature>java.lang.String toUpper(java.lang.String)</function-signature>
+    </function>
+</taglib>
